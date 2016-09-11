@@ -1,0 +1,81 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/for_NBF_index_donate.css">
+
+    <title>FAQ</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.6.2/remarkable.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+      <div id="navbarAndBanner"></div>
+      <div>
+        <div class="accordion">
+      <div class="accordion-section">
+          <a class="accordion-section-title" href="#accordion-1">What is the adoption process?</a>
+          <div id="accordion-1" class="accordion-section-content">
+              <p>The first step is always filling out an application. Please be sure to answer ALL questions, including Landlord info with name and contact number please dont answer: available upon request - the question on the application IS the request without this info we can not proceed. Once your application is received, one of our adoption counselors will get in touch with you within 24-48 hours. Please be patient, we are all volunteers and will get back to you as soon as we can. If you havent heard back within 5 days, please send us an email to make sure we actually received your application. There are times when they end up in cyber heaven without ever reaching us. We do aerial and home checks before your application is approved. Once you are approved, be sure to BRING THE WHOLE FAMILY AND ALL OF YOUR CURRENT DOGS. It is VERY important that your current dogs and any new potential dog meet to see how they get along. In most cases we can not proceed with an adoption until your dogs come down with you. In most cases the dog is able to go home with you on the day of adoption unless they still need to be spayed/neutered. This will be scheduled and you will be able to pick up your dog once he/she has been fixed.All our dogs are up to date with shots, are micro chipped and are/will be spayed/neutered before adoption. The adoption fee includes all this plus the one time registration fee with the microchip company. We will do the chip registration for you 10-14 days after adoption, and after you inform us if/what you changed the dogs name to.In the case of puppies and fostered dogs, once approved, you will be put in touch with the foster family and a meeting is arranged.</p>
+          </div><!--end .accordion-section-content-->
+      </div><!--end .accordion-section-->
+  </div>
+  <div class="accordion">
+<div class="accordion-section">
+    <a class="accordion-section-title" href="#accordion-2">What is the adoption fee and what does it include?</a>
+
+    <div id="accordion-2" class="accordion-section-content">
+        <p>Our general adoption fee is $345, but fees can vary and range from $150 to $500. They are set, taking into account the dogs age, training level, temperament, if they are newly arrived, medical conditions if any and other factors. Adoption fees are used not only to rescue and place the dog you are personally adopting, but to aid in the future rescue and rehabilitation of other deserving dogs. Adoption fees are necessary. without fees our rescue efforts would quickly come to an end. The adoption fee includes spay/neuter, microchip, microchip registration and up to date vaccinations.</p>
+    </div><!--end .accordion-section-content-->
+</div><!--end .accordion-section-->
+</div>
+<div class="accordion">
+<div class="accordion-section">
+  <a class="accordion-section-title" href="#accordion-3">Do you adopt to homes out of state?</a>
+
+  <div id="accordion-3" class="accordion-section-content">
+      <p>Yes, we do. (dogs 6 mos and up - no puppies under 6 mos) We require a very detailed application and digital pictures of your home, fencing and yard.</p>
+  </div><!--end .accordion-section-content-->
+</div><!--end .accordion-section-->
+</div>
+</div>
+      <div id="footer"></div>
+      <script>$(document).ready(function() {
+    function close_accordion_section() {
+        $('.accordion .accordion-section-title').removeClass('active');
+        $('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+    }
+
+    $('.accordion-section-title').click(function(e) {
+        // Grab current anchor value
+        var currentAttrValue = $(this).attr('href');
+
+        if($(e.target).is('.active')) {
+            close_accordion_section();
+        }else {
+            close_accordion_section();
+
+            // Add active class to section title
+            $(this).addClass('active');
+            // Open up the hidden content panel
+            $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
+        }
+
+        e.preventDefault();
+    });
+});
+  </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script type="text/babel" src="scripts/addNavbarBannerFooter.js"></script>
+      <script type="text/babel" src="scripts/faq0.js"></script>
+  </body>
+</html>
